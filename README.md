@@ -1,5 +1,5 @@
-# TeamHubDivers
-
+# Team
+ - HubDivers
 ## Members
 - Kempton Maillett, Project Manager
 - Obed Appiah, Designer

@@ -1,4 +1,4 @@
-# TeamHub
+# TeamHubDivers
 
 ## Members
 - Kempton Maillett, Project Manager

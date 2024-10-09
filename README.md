@@ -1,7 +1,7 @@
 # Team HubDivers
 
 ## Members
-- Kempton Maillett, Project Manager
+- Kempton Maillett Gomiz, Project Manager
 - Obed Appiah, Designer
 - Anthony Weaver, Developer
 - Ben Caras, Developer

@@ -5,7 +5,7 @@
 - Obed Appiah, Designer
 - Anthony Weaver, Developer
 - Ben Caras, Developer
-- Bryce Roy, Developer
+- Bryce D Roy, Developer
 
 ## Mission Statement
 Help beginner programmers learn to read code.

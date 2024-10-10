@@ -12,6 +12,7 @@ Help beginner programmers learn to read code.
 
 ## Problem Statement
 **Helping Beginning Programmers Learn to Read Code**
+
 Many beginner programmers struggle to read and understand code, which limits their ability to progress in learning programming languages and solving complex problems.
 
 For example, novice programmers often find it challenging to understand the logic and structure of even simple code snippets. This confusion can stem from unfamiliar syntax, poorly commented code, or difficulty in grasping the relationships between different parts of the code. As a result, beginners frequently become discouraged and may abandon learning programming altogether.

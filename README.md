@@ -3,7 +3,7 @@
 ## Members
 - Kempton Maillett Gomiz, Project Manager
 - Obed Appiah, Designer
-- Anthony Weaver, Developer
+- Anthony M Weaver, Developer
 - Ben P Caras, Developer
 - Bryce D Roy, Developer
 

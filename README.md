@@ -21,4 +21,4 @@ Existing solutions such as online tutorials and coding platforms often focus on 
 
 While current platforms help beginners practice coding, they don’t provide enough focus on teaching how to read and interpret existing code effectively. This gap leaves new programmers struggling to understand the foundational building blocks of coding, preventing them from developing strong problem-solving skills and confidence.
 
-How can we design an interactive platform or program that teaches beginner programmers how to read and interpret code efficiently, providing real-time feedback and clear explanations to enhance their learning process?
+How can we design an interactive platform or program that teaches beginner programmers how to read and interpret code efficiently, providing real-time feedback and clear explanations on the functionality of the code as well as explanations for the syntax errors of the code which will enhance their learning process?

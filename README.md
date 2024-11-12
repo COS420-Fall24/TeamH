@@ -4,7 +4,7 @@
 - Kempton Maillett Gomiz, Project Manager
 - Obed Appiah, Designer
 - Anthony M Weaver, Developer
-- Ben P Caras, Developer
+- Benjamin P Caras, Developer
 - Bryce D Roy, Developer
 
 ## Mission Statement

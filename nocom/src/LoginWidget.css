@@ -1,6 +1,7 @@
 .login-widget {
-    width: 300px;
-    margin: 50px auto;
+    position: absolute;
+    right: 0%;
+    width: 250px;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;

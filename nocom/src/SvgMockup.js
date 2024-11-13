@@ -1,13 +1,12 @@
 import React from 'react';
+import ScreenSvg from './Screen.svg'; // Ensure the path is correct
 
-const Screen = (props) => {
-    return (
-      <div className="screen">
-        <img src={MockupSvg} alt="UI Mockup" style={{ width: '100%', height: 'auto' }} />
-        {props.children} {/* Render any other child components, like a login form */}
-      </div>
-    );
-  };
-  
-  export default Screen;
-  
+const SvgMockup = () => {
+  return (
+    <div>
+      <img src={ScreenSvg} alt="UI Mockup" style={{ width: '100%', height: 'auto' }} />
+    </div>
+  );
+};
+
+export default SvgMockup;

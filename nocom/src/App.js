@@ -1,30 +1,16 @@
 import React from 'react';
 import './App.css';
-import LoginWidget from './LoginWidget';
 import InputBox from './InputBox';
+import SvgMockup from './SvgMockup'; // Ensure this path matches the location of SvgMockup.js
+import LoginWidget from './LoginWidget'; // Your existing login component
 
-function App() {
-    const [count, setCount] = React.useState(0);
-  
-    const handleClick = () => {
-      setCount(count + 1);
-    };
-    
-  
-    return (
-      <div className="App">
-        <LoginWidget/>
-        <header className="App-header">
-          <p>
-            Hello User press Input Code and press Breakdown to begin!
-          </p>
-          <button type="button" onClick={handleClick}>Breakdown</button>
-          <p>
-            Breakdowns {count}
-          </p>
-        </header>
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div>
+      <SvgMockup /> {/* Displays the Screen.svg */}
+      <LoginWidget /> {/* Your login form or other content */}
+    </div>
+  );
+};
 
 export default App;

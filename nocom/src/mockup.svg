@@ -1,0 +1,3 @@
+import MockupSvg from './mockup.svg';
+
+const MyComponent = () => <img src={MockupSvg} alt="UI Mockup" />;

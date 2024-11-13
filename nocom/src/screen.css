@@ -1,8 +1,0 @@
-.screen {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Center content for testing */
-  min-height: 100vh; /* Ensure the component takes up the full viewport */
-}

@@ -7,6 +7,33 @@
 - Benjamin P Caras, Developer
 - Bryce D Roy, Developer
 
+### Quick Start
+
+#### Install
+Step 1: Open Terminal \
+Step 2: Run `cd nocom` in terminal to position yourself in the FrontEnd folder \
+Step 3: Run `npm install`
+
+This will install all the packages and their dependencies used by the app. You need to complete this before building, running or testing the app.
+
+
+#### Build 
+Step 1: Open Terminal \
+Step 2: Run `cd nocom` in terminal to position yourself in the app folder \
+Step 3: Run `npm run build` 
+
+#### Run application
+Step 1: Open Terminal \
+Step 2: Run `cd nocom` in terminal to position yourself in the app folder \
+Step 3: Run `npm start` or `npm run start` 
+
+A browser window should open automatically. If no browser window opens, open one manually and navigate to http://localhost:3000/
+
+#### Run unit tests
+Step 1: Open Terminal \
+Step 2: Run `cd nocom` in terminal to position yourself in the app folder \
+Step 3: Run `npm run test`
+
 ## Mission Statement
 Help beginner programmers learn to read code.
 

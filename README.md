@@ -1,17 +1,16 @@
 # Team HubDivers
 
 ## Members
-- Kempton Maillett Gomiz, Project Manager
+- Kempton Maillett Gómiz, Project Manager
 - Obed Appiah, Designer
 - Anthony M Weaver, Developer
 - Benjamin P Caras, Developer
 - Bryce D Roy, Developer
 
 ## Mission Statement
-Help beginner programmers learn to read code.
+Helping beginner programmers learn to read code.
 
 ## Problem Statement
-**Helping Beginning Programmers Learn to Read Code**
 
 Many beginner programmers struggle to read and understand code, which limits their ability to progress in learning programming languages and solving complex problems.
 

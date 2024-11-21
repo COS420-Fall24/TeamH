@@ -8,7 +8,6 @@
 - Bryce D Roy, Developer
 
 ### Quick Start
-
 #### Install
 Step 1: Open Terminal \
 Step 2: Run `cd nocom` in terminal to position yourself in the FrontEnd folder \

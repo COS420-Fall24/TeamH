@@ -13,6 +13,7 @@ function Input(){
 
     // Or you can work with it as a plain object:
     const formJson = Object.fromEntries(formData.entries());
+    //remove later
     console.log(formJson);
   }
 

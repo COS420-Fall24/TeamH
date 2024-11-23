@@ -32,10 +32,26 @@ h2 {
     border-radius: 5px;
 }
 
+.inputbox button {
+    position: absolute; /* Enable precise placement within the container */
+    left: 50%; /* Move the button horizontally to the center */
+    bottom: 1px; /* Align the button to the bottom of the input box */
+    transform: translateX(-50%); /* Offset by 50% of its own width for perfect centering */
+    width: 150px; /* Set the button width */
+    padding: 10px; /* Add padding for height and clickability */
+    background-color: #41e241; /* Green background */
+    color: white; /* White text */
+    font-size: 16px; /* Text size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #41e241;
     color: white;
     font-size: 16px;
     border: none;
@@ -44,7 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #41e241;
 }
 
 .output-container {

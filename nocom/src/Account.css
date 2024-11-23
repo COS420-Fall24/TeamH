@@ -10,7 +10,7 @@
     position: relative; /* Keeps the dropdown aligned relative to this button */
     width: 120px;
     height: 40px;
-    background-color: #007bff;
+    background-color: #41e241;
     color: white;
     border: none;
     border-radius: 20px;
@@ -26,7 +26,7 @@
   
   /* Hover Effects */
   .Account:hover {
-    background-color: #0056b3;
+    background-color: #41e241;
     transform: scale(1.05);
   }
   

@@ -46,6 +46,7 @@
 
 .inp textarea{
     resize: none;
+    white-space: nowrap;
     width: calc(78vw);
     height: calc(80vh);
 }

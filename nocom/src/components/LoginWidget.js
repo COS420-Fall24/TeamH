@@ -1,50 +1,51 @@
 import React, { useState } from 'react';
-import './LoginWidget.css'; // Optional if you have a CSS file for styling
+import { useNavigate } from 'react-router-dom';
+import './LoginWidget.css';
 
 const LoginWidget = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    return (
-        <div className="login-widget">
-            <h2>Login Form</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <label>Email:</label>
-                    <input 
-                        type="email" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        required 
-                    />
-                </div>
-                <div className="input-container">
-                    <label>Password:</label>
-                    <input 
-                        type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        required 
-                    />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+    // Simulate login logic
+    if (email === 'admin@example.com' && password === 'password') {
+      navigate('/app'); // Navigate to the main app after login
+    } else {
+      alert('Invalid email or password');
+    }
+  };
 
-            {submitted && (
-                <div className="output-container">
-                    <h3>Your Input:</h3>
-                    <p>Email: {email}</p>
-                    <p>Password: {password}</p>
-                </div>
-            )}
+  return (
+    <div className="login-widget">
+      <h1 className="app-title">NoCom</h1> {/* App Title */}
+        
+      <h2>Please Login below!</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="input-container">
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-    );
+        <div className="input-container">
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="Login">Submit</button>
+      </form>
+    </div>
+  );
 };
 
 export default LoginWidget;

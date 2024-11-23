@@ -1,76 +1,78 @@
+/* Center the login widget on the screen */
 .login-widget {
-    position: absolute;
-    right: 0%;
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f4f4f4; /* Light background color */
+    font-family: Arial, sans-serif;
+  }
+  
+
+  
+  /* Style the app title */
+  .app-title {
+    position: absolute; /* Fix position at the top */
+    top: 20px; /* Add spacing from the top */
+    font-size: 36px; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: #41e241; /* Blue color for the title */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Style the login container */
+  .login-container {
+    width: 300px; /* Fixed width for the form */
     padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-
-h2 {
+    background-color: #fff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center;
-    color: #333;
-}
-
-.input-container {
+  }
+  
+  /* Form heading */
+  .login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input container */
+  .input-container {
     margin-bottom: 15px;
-}
-
-.input-container label {
+    text-align: left; /* Align labels to the left */
+  }
+  
+  .input-container label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
     color: #555;
-}
-
-.input-container input {
+  }
+  
+  /* Style the input fields */
+  .input-container input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+  }
+  
 
-.inputbox button {
-    position: absolute; /* Enable precise placement within the container */
-    left: 50%; /* Move the button horizontally to the center */
-    bottom: 1px; /* Align the button to the bottom of the input box */
-    transform: translateX(-50%); /* Offset by 50% of its own width for perfect centering */
-    width: 150px; /* Set the button width */
-    padding: 10px; /* Add padding for height and clickability */
-    background-color: #41e241; /* Green background */
-    color: white; /* White text */
-    font-size: 16px; /* Text size */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-button {
+  /* Style the submit button */
+  button {
     width: 100%;
     padding: 10px;
-    background-color: #41e241;
+    background-color: #41e241; /* Blue color */
     color: white;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #41e241;
-}
-
-.output-container {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-}
-
-.output-container p {
-    font-size: 14px;
-    color: #333;
-}
+  }
+  
+  button:hover {
+    background-color: #41e241; /* Darker blue on hover */
+  }
+  

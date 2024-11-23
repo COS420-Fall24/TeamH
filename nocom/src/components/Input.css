@@ -1,17 +1,36 @@
-.inputbox{
+/* Style for the input container */
+.inputbox {
     margin: 20px;
     text-align: center;
-}
-
-.inp textarea{
+  }
+  
+  .inp textarea {
     resize: none;
     white-space: nowrap;
     width: calc(78vw);
     height: calc(80vh);
-}
-
-.con textarea{
+  }
+  
+  .con textarea {
     resize: none;
     width: calc(78vw);
     height: calc(10vh);
-}
+  }
+  
+  /* Style for the BreakDown button */
+  .breakdown-button {
+    padding: 10px 20px; /* Adjust button size */
+    background-color: #41e241; /* Green background color */
+    color: white; /* White text */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    width: 10%;
+  }
+  
+  .breakdown-button:hover {
+    background-color: #36c336; /* Darker green on hover */
+  }
+  

@@ -32,7 +32,7 @@ function Input(){
         <InputBox name="Context"/>
       </label>
       </div>
-      <button type="submit">BreakDown</button>
+      <button type="submit" className="breakdown-button">BreakDown</button>
       </form>
     </div>
   )

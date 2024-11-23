@@ -1,21 +1,13 @@
 import React from 'react';
-import './InputBox.css';
+import './Account.css'; // Import the styles for the Account button
 
-function InputBox({ className, onClick }) {
-  const defaultProps = {
-    image: 'https://assets.api.uizard.io/api/cdn/stream/9b130954-67eb-43a8-bd9b-2ef2890b017f.png',
-  };
-
+function Account({ onClick }) {
   return (
-    <button
-      className={`InputBox ${className}`} // Apply the passed className
-      onClick={onClick} // Handle clicks
-      style={{
-        backgroundImage: `url(${defaultProps.image})`,
-        cursor: 'pointer', // Ensure it looks clickable
-      }}
-    />
+    <button className="Account" onClick={onClick} aria-label="Account Button">
+      <i className="fas fa-user-circle" style={{ marginRight: '8px' }}></i>
+      Account
+    </button>
   );
 }
 
-export default InputBox;
+export default Account;

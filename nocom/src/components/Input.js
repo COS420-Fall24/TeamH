@@ -1,8 +1,10 @@
 import React from 'react';
 import './Input.css';
+import { useNavigate } from 'react-router-dom';
 import InputBox from './InputBox';
 
 function Input(){
+  const navigate = useNavigate();
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -15,6 +17,8 @@ function Input(){
     const formJson = Object.fromEntries(formData.entries());
     //remove later
     console.log(formJson);
+    // Navigate to the Feedback/Explanations screen
+    navigate('/feedback');
   }
 
   return(

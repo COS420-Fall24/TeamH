@@ -1,17 +1,40 @@
 import React from 'react';
 import './App.css';
-import Input from './Input';
-import LoginWidget from './LoginWidget'; // Your existing login component
-import Account from './Account'; // Updated Account component
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Input from './components/Input';
+import LoginWidget from './components/LoginWidget';
+import Account from './components/Account';
+import Feedback from './components/Feedback/Feedback'; // Import the new Feedback screen
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
   return (
-    <div>
-      <LoginWidget />
-      <Account /> {/* Account now handles its own interactions (dropdown or modal) */}
-      <Input />
-    </div>
+    <Router>
+      <Routes>
+        {/* Input screen route */}
+        <Route
+          path="/"
+          element={
+            <div>
+              <LoginWidget />
+              <Account />
+              <Input />
+            </div>
+          }
+        />
+
+        {/* Feedback/Explanations screen route */}
+        <Route
+          path="/feedback"
+          element={
+            <div>
+              <Account />
+              <Feedback />
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
   );
 };
 

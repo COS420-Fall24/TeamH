@@ -38,21 +38,3 @@
         transform: rotate(360deg);
     }
 }
-
-.inputbox{
-    margin: 20px;
-    text-align: center;
-}
-
-.inp textarea{
-    resize: none;
-    white-space: nowrap;
-    width: calc(78vw);
-    height: calc(80vh);
-}
-
-.con textarea{
-    resize: none;
-    width: calc(78vw);
-    height: calc(10vh);
-}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./InputBox"
+import "./InputBox.css"
 
 function InputBox(props) {
   const [value, setValue] = useState('');
@@ -17,7 +17,7 @@ function InputBox(props) {
     }
   };
   return (
-    <textarea className={props.className} value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={handleKeyDown} />
+    <textarea name={props.name} value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={handleKeyDown} />
   );
 }
 export default InputBox;

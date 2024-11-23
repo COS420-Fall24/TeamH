@@ -1,0 +1,11 @@
+.InputBox {
+    position: absolute;
+    top: 92px;
+    left: 1136px;
+    width: 100px;
+    height: 28px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  

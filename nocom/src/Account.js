@@ -1,12 +1,32 @@
-import React from 'react';
-import './Account.css'; // Import the styles for the Account button
+import React, { useState } from 'react';
+import './Account.css';
 
-function Account({ onClick }) {
+function Account() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen); // Toggle the dropdown visibility
+  };
+
   return (
-    <button className="Account" onClick={onClick} aria-label="Account Button">
-      <i className="fas fa-user-circle" style={{ marginRight: '8px' }}></i>
-      Account
-    </button>
+    <div className="account-container">
+      {/* Account Button */}
+      <button className="Account" onClick={toggleDropdown}>
+        <i className="fas fa-user-circle" style={{ marginRight: '8px' }}></i>
+        Account
+      </button>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="account-dropdown">
+          <ul>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
 

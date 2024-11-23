@@ -1,11 +1,31 @@
-.InputBox {
-    position: absolute;
-    top: 92px;
-    left: 1136px;
-    width: 100px;
-    height: 28px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.Account {
+    position: absolute; /* Or 'fixed' if you want the button to stay on screen while scrolling */
+    top: 10px;
+    right: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border-radius: 20px; /* Rounded corners */
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    display: flex; /* Align content inside the button */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: all 0.3s ease; /* Smooth hover animation */
+  }
+  
+  .Account:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+  }
+  
+  .Account:focus {
+    outline: 2px solid #0056b3; /* Visible outline on focus */
+    outline-offset: 2px; /* Space between button and outline */
   }
   

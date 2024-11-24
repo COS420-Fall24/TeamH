@@ -25,11 +25,11 @@ function Input(){
     <div className='inputbox'>
       <form method="post" onSubmit={handleSubmit}>
       <div>
-      <label className='inp'>
-        <InputBox name="Code"/>
+      <label>
+        <InputBox name="Code" className="inp"/>
       </label>
-      <label className='con'>
-        <InputBox name="Context"/>
+      <label>
+        <InputBox name="Context" className="con"/>
       </label>
       </div>
       <button type="submit" className="breakdown-button">BreakDown</button>

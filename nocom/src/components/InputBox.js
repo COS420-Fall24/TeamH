@@ -17,7 +17,7 @@ function InputBox(props) {
     }
   };
   return (
-    <textarea name={props.name} onKeyDown={handleKeyDown} />
+    <textarea name={props.name} className={props.className} placeholder={props.placeholder}onKeyDown={handleKeyDown} />
   );
 }
 export default InputBox;

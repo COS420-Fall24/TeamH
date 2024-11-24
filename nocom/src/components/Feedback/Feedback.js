@@ -1,5 +1,6 @@
 import React from 'react';
 import './Feedback.css';
+import InputBox from '../InputBox';
 
 function Feedback() {
   const handleKeyDown = (e) => {
@@ -22,9 +23,9 @@ function Feedback() {
 
       {/* Larger Grey Container with Side-by-Side Text Areas */}
       <div className="large-grey-container">
-        <textarea className="big-text-box" placeholder="Code" onKeyDown={handleKeyDown}></textarea>
-        <textarea className="big-text-box" placeholder="Explanations" onKeyDown={handleKeyDown}></textarea>
-        <textarea className="big-text-box" placeholder="Screen" onKeyDown={handleKeyDown}></textarea>
+        <InputBox className="big-text-box" placeholder="Code"/>
+        <InputBox className="big-text-box" placeholder="Exlpanation"/>
+        <InputBox className="big-text-box" placeholder="Screen"/>
       </div>
     </div>
   );

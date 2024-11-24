@@ -12,8 +12,7 @@ const App = () => {
     <Router>
       <Routes>
         {/* Login screen route */}
-        <Route path="/" element={<LoginWidget />} />
-
+        <Route path="/" element={<LoginWidget/>} />
         {/* Main app route */}
         <Route
           path="/app"

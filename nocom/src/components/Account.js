@@ -12,7 +12,7 @@ function Account() {
     <div className="account-container">
       {/* Account Button */}
       <button className="Account" onClick={toggleDropdown}>
-        <i className="fas fa-user-circle" style={{ marginRight: '8px' }}></i>
+        <i className="fas fa-user-circle"></i>
         Account
       </button>
 

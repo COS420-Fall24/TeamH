@@ -1,9 +1,9 @@
-import React from 'react';
-import './Input.css';
-import { useNavigate } from 'react-router-dom';
-import InputBox from './InputBox';
+import React from "react";
+import "./Input.css";
+import { useNavigate } from "react-router-dom";
+import InputBox from "./InputBox";
 
-function Input(){
+function Input() {
   const navigate = useNavigate();
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
@@ -18,24 +18,26 @@ function Input(){
     //remove later
     console.log(formJson);
     // Navigate to the Feedback/Explanations screen
-    navigate('/feedback');
+    navigate("/feedback");
   }
 
-  return(
-    <div className='inputbox'>
+  return (
+    <div className="inputbox">
       <form method="post" onSubmit={handleSubmit}>
-      <div>
-      <label>
-        <InputBox name="Code" className="inp"/>
-      </label>
-      <label>
-        <InputBox name="Context" className="con"/>
-      </label>
-      </div>
-      <button type="submit" className="breakdown-button">BreakDown</button>
+        <div>
+          <label>
+            <InputBox name="Code" className="inp" />
+          </label>
+          <label>
+            <InputBox name="Context" className="con" />
+          </label>
+        </div>
+        <button type="submit" className="breakdown-button">
+          BreakDown
+        </button>
       </form>
     </div>
-  )
+  );
 }
 
 export default Input;

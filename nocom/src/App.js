@@ -1,14 +1,41 @@
 import React from 'react';
 import './App.css';
-import Input from './Input';
-import LoginWidget from './LoginWidget'; // Your existing login component
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Input from './components/Input';
+import LoginWidget from './components/LoginWidget';
+import Account from './components/Account';
+import Feedback from './components/Feedback/Feedback';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
   return (
-    <div>
-      <LoginWidget /> {/* Your login form or other content */}
-      <Input/>
-    </div>
+    <Router>
+      <Routes>
+        {/* Login screen route */}
+        <Route path="/" element={<LoginWidget/>} />
+        {/* Main app route */}
+        <Route
+          path="/app"
+          element={
+            <div>
+              <Account />
+              <Input />
+            </div>
+          }
+        />
+
+        {/* Feedback/Explanations screen route */}
+        <Route
+          path="/feedback"
+          element={
+            <div>
+              <Account />
+              <Feedback />
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
   );
 };
 

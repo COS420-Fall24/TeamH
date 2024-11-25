@@ -1,8 +1,10 @@
 import React from 'react';
 import './Input.css';
+import { useNavigate } from 'react-router-dom';
 import InputBox from './InputBox';
 
 function Input(){
+  const navigate = useNavigate();
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -15,20 +17,22 @@ function Input(){
     const formJson = Object.fromEntries(formData.entries());
     //remove later
     console.log(formJson);
+    // Navigate to the Feedback/Explanations screen
+    navigate('/feedback');
   }
 
   return(
     <div className='inputbox'>
       <form method="post" onSubmit={handleSubmit}>
       <div>
-      <label className='inp'>
-        <InputBox name="Code"/>
+      <label>
+        <InputBox name="Code" className="inp"/>
       </label>
-      <label className='con'>
-        <InputBox name="Context"/>
+      <label>
+        <InputBox name="Context" className="con"/>
       </label>
       </div>
-      <button type="submit">BreakDown</button>
+      <button type="submit" className="breakdown-button">BreakDown</button>
       </form>
     </div>
   )

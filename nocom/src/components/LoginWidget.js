@@ -6,12 +6,12 @@ const LoginWidget = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Simulate login logic
     if (email === 'admin@example.com' && password === 'password') {
+      console.log(1)
       navigate('/app'); // Navigate to the main app after login
     } else {
       alert('Invalid email or password');
@@ -24,7 +24,7 @@ const LoginWidget = () => {
         
       <h2>Please Login below!</h2>
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
+        <div className="input-container">q
           <label>Email:</label>
           <input
             type="email"

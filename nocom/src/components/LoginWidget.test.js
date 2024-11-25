@@ -3,24 +3,26 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import LoginWidget from "./LoginWidget";
 
-test("renders login form with title, email, password inputs, and submit button", () => {
-  render(
+const setup = () => {
+  const utils = render(
     <MemoryRouter>
       <LoginWidget />
     </MemoryRouter>
   );
-
-  // Check for the title
-  expect(screen.getByText(/NoCom/i)).toBeInTheDocument();
-
-  // Select the email input by type attribute using querySelector
   const emailInput = document.querySelector('input[type="email"]');
-  expect(emailInput).toBeInTheDocument();
-
-  // Select the password input by type attribute using querySelector
   const passwordInput = document.querySelector('input[type="password"]');
-  expect(passwordInput).toBeInTheDocument();
+  return {
+    emailInput,
+    passwordInput,
+    ...utils,
+  }
+}
 
-  // Check for the submit button
+test("renders login form with title, email, password inputs, and submit button", () => {
+  const {emailInput,passwordInput} = setup()
+  expect(screen.getByText(/NoCom/i)).toBeInTheDocument();
+  expect(emailInput).toBeInTheDocument();
+  expect(passwordInput).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /submit/i })).toBeInTheDocument();
 });
+

@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import LoginWidget from "./LoginWidget";
 
@@ -26,3 +26,10 @@ test("renders login form with title, email, password inputs, and submit button",
   expect(screen.getByRole("button", { name: /submit/i })).toBeInTheDocument();
 });
 
+test('This should check Input into fields', () => {
+  const {emailInput,passwordInput} = setup()
+  fireEvent.change(emailInput, {target: {value: '23'}})
+  fireEvent.change(passwordInput, {target: {value: '23'}})
+  expect(emailInput.value).toBe('23')
+  expect(passwordInput.value).toBe('23')
+})

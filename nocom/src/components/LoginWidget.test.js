@@ -1,19 +1,30 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, Route, Routes, Router } from "react-router-dom";
 import LoginWidget from "./LoginWidget";
+import Input from "./Input";
 
 const setup = () => {
   const utils = render(
     <MemoryRouter>
-      <LoginWidget />
+      <Routes>
+      <Route path="/" element={<LoginWidget/>} />
+      <Route
+          path="/app"
+          element={
+            <Input />
+          }
+        />
+      </Routes>
     </MemoryRouter>
   );
   const emailInput = document.querySelector('input[type="email"]');
   const passwordInput = document.querySelector('input[type="password"]');
+  const submit = document.querySelector('button[type="Login"]');
   return {
     emailInput,
     passwordInput,
+    submit,
     ...utils,
   }
 }
@@ -32,4 +43,20 @@ test('This should check Input into fields', () => {
   fireEvent.change(passwordInput, {target: {value: '23'}})
   expect(emailInput.value).toBe('23')
   expect(passwordInput.value).toBe('23')
+})
+
+test('This should check Input into fields', () => {
+  const {emailInput,passwordInput,submit} = setup()
+  fireEvent.change(emailInput, {target: {value: 'admin@example.com'}})
+  fireEvent.change(passwordInput, {target: {value: 'password'}})
+  fireEvent.click(submit)
+  expect(document.body.textContent).toBe('BreakDown')
+})
+
+test('This should check Input into fields', () => {
+  const {emailInput,passwordInput,submit} = setup()
+  fireEvent.change(emailInput, {target: {value: 'admin@example.com'}})
+  fireEvent.change(passwordInput, {target: {value: 'wrongpassword'}})
+  fireEvent.click(submit)
+  expect(document.body.textContent).not.toBe('BreakDown')
 })

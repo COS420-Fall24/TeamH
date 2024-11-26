@@ -1,3 +1,10 @@
+/* Container */
+.account-container {
+  position: absolute; /* Position relative to the page */
+  top: 10px; /* Distance from the top */
+  /* right: 100px; */
+  right: calc(1%); /* Distance from the left */
+}
 .Account {
   width: 120px;
   height: 40px;
@@ -48,4 +55,12 @@
 .account-dropdown li a {
   text-decoration: none;
   color: #333;
+}
+
+.account-dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+.fas {
+  margin-right: 8px;
 }

@@ -9,7 +9,7 @@ function Account() {
   };
   return (
     <div className="account-container">
-      <button className="Account" onClick={toggleDropdown}>
+      <button className="Account" onClick={toggleDropdown} aria-label="Account">
         Account
       </button>
       {isOpen && (

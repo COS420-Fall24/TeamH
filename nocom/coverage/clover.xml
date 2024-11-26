@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732590840177" clover="3.2.0">
-  <project timestamp="1732590840177" name="All files">
+<coverage generated="1732649782464" clover="3.2.0">
+  <project timestamp="1732649782464" name="All files">
     <metrics statements="41" coveredstatements="41" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="64" coveredelements="64" complexity="0" loc="41" ncloc="41" packages="3" files="6" classes="6"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -17,7 +17,7 @@
         <line num="5" count="7" type="stmt"/>
         <line num="7" count="7" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
-        <line num="11" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
       </file>
       <file name="Input.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\components\Input.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

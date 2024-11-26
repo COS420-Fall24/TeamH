@@ -3,10 +3,10 @@
 
 name: CI
 
-on:
+on: workflow_dispatch:
     push:
         branches: [main,workflow]
-    workflow_dispatch:
+    
 
 defaults:
   run:

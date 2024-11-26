@@ -7,36 +7,38 @@ import Account from "./components/Account";
 import Feedback from "./components/Feedback/Feedback";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        {/* Login screen route */}
-        <Route path="/" element={<LoginWidget />} />
-        {/* Main app route */}
-        <Route
-          path="/app"
-          element={
-            <div>
-              <Account />
-              <Input />
-            </div>
-          }
-        />
+const AppRoutes = () => (
+  <Routes>
+    {/* Login screen route */}
+    <Route path="/" element={<LoginWidget />} />
+    {/* Main app route */}
+    <Route
+      path="/app"
+      element={
+        <div>
+          <Account />
+          <Input />
+        </div>
+      }
+    />
+    {/* Feedback/Explanations screen route */}
+    <Route
+      path="/feedback"
+      element={
+        <div>
+          <Account />
+          <Feedback />
+        </div>
+      }
+    />
+  </Routes>
+);
 
-        {/* Feedback/Explanations screen route */}
-        <Route
-          path="/feedback"
-          element={
-            <div>
-              <Account />
-              <Feedback />
-            </div>
-          }
-        />
-      </Routes>
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <AppRoutes />
+  </Router>
+);
 
 export default App;
+export { AppRoutes };

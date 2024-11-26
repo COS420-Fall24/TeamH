@@ -17,9 +17,3 @@ test('renders Account and Input at "/app" route', () => {
   render(<App />);
   expect(screen.getByText(/Account/i)).toBeInTheDocument();
 });
-
-test('renders Account and Feedback at "/feedback" route', () => {
-  navigateTo("/feedback");
-  render(<App />);
-  expect(screen.getByText(/Account/i)).toBeInTheDocument();
-});

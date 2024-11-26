@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732577414359" clover="3.2.0">
-  <project timestamp="1732577414359" name="All files">
+<coverage generated="1732590840177" clover="3.2.0">
+  <project timestamp="1732590840177" name="All files">
     <metrics statements="41" coveredstatements="41" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="64" coveredelements="64" complexity="0" loc="41" ncloc="41" packages="3" files="6" classes="6"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="App.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\App.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components">
       <metrics statements="38" coveredstatements="38" conditionals="10" coveredconditionals="10" methods="11" coveredmethods="11"/>
       <file name="Account.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\components\Account.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="5" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
       </file>
       <file name="Input.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\components\Input.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -32,7 +32,7 @@
       </file>
       <file name="InputBox.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\components\InputBox.js">
         <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="5" count="15" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
         <line num="6" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="4" type="stmt"/>
         <line num="8" count="4" type="stmt"/>
@@ -44,7 +44,7 @@
         <line num="15" count="4" type="stmt"/>
         <line num="16" count="4" type="stmt"/>
         <line num="17" count="4" type="stmt"/>
-        <line num="21" count="15" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
       </file>
       <file name="LoginWidget.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\components\LoginWidget.js">
         <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
@@ -67,7 +67,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Feedback.js" path="C:\Users\obed.appiah\Desktop\Screen\screen\nocom\src\components\Feedback\Feedback.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
   </project>

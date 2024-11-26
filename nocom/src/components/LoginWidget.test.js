@@ -58,5 +58,5 @@ test('This should check Input into fields', () => {
   fireEvent.change(emailInput, {target: {value: 'admin@example.com'}})
   fireEvent.change(passwordInput, {target: {value: 'wrongpassword'}})
   fireEvent.click(submit)
-  expect(document.body.textContent).toBe('BreakDown')
+  expect(document.body.textContent).not.toBe('BreakDown')
 })

@@ -6,7 +6,7 @@ name: CI
 on:
     push:
         branches: [main,workflow]
-on: workflow_dispatch
+  workflow_dispatch
     
 
 defaults:

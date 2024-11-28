@@ -28,6 +28,9 @@ Step 3: Run `npm start` or `npm run start`
 
 A browser window should open automatically. If no browser window opens, open one manually and navigate to http://localhost:3000/
 
+#### Install dependencies
+`npm i ollama`
+
 #### Run unit tests
 Step 1: Open Terminal \
 Step 2: Run `cd nocom` in terminal to position yourself in the app folder \

@@ -20,15 +20,20 @@ function Input() {
     const formJson = Object.fromEntries(formData.entries());
     const { Code, Context } = formJson;
 
-    // Call the Ollama API
-    const res = await ollama.chat({
-      model: 'llama3.1',
-      messages: [{ role: 'user', content: `Explain the following code as a tutor at MIT:\n\nContext: ${Context}\n\nCode:\n${Code}` }],
-    });
-    setResponse(res.message.content);
+    try {
+      // Call the Ollama API
+      const res = await ollama.chat({
+        model: 'llama3.2', // Ensure this model name is correct or update it
+        messages: [{ role: 'user', content: `Explain the following code as a tutor at MIT:\n\nContext: ${Context}\n\nCode:\n${Code}` }],
+      });
+      setResponse(res.message.content);
 
-    // Navigate to the Feedback/Explanations screen
-    navigate("/feedback");
+      // Navigate to the Feedback/Explanations screen with state
+      navigate("/feedback", { state: { response: res.message.content } });
+    } catch (error) {
+      console.error("Error calling Ollama API:", error);
+      alert("Error calling Ollama API. Please ensure the model name is correct and try again.");
+    }
   };
 
   return (

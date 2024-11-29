@@ -8,9 +8,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prestart": "npm install" 
+    "prestart": "npm install"
   },
   "dependencies": {
+    "ollama": "^0.5.10",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "^5.0.1"

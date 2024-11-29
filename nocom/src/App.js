@@ -5,6 +5,7 @@ import Input from "./components/Input";
 import LoginWidget from "./components/LoginWidget";
 import Account from "./components/Account";
 import Feedback from "./components/Feedback/Feedback";
+import OllamaChat from "./components/OllamaChat"; // Import the new component
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
@@ -20,10 +21,10 @@ const App = () => {
             <div>
               <Account />
               <Input />
+              <OllamaChat /> {/* Add the new component here */}
             </div>
           }
         />
-
         {/* Feedback/Explanations screen route */}
         <Route
           path="/feedback"

@@ -10,7 +10,7 @@ const OllamaChat = () => {
   const handleChat = async () => {
     const res = await ollama.chat({
       model: 'llama3.1',
-      messages: [{ role: 'user', content: `Explain the following code as a tutor at MIT:\n\nContext: ${context}\n\nCode:\n${code}` }],
+      messages: [{ role: 'user', content: `You are an application designed for Helping beginner programmers learn to read code.:\n\nThe context provided by the user is: ${context}\n\The code is:\n${code}` }],
     });
     setResponse(res.message.content);
   };

@@ -1,6 +1,6 @@
 // src/components/OllamaChat.js
 import React, { useState } from 'react';
-import ollama from 'ollama';
+import ollama from 'ollama/browser'; // Import the browser module
 
 const OllamaChat = () => {
   const [code, setCode] = useState('');

@@ -45,5 +45,10 @@
       "!**/node_modules/**",
       "!src/index.js"
     ]
-  }
+  },
+  "browser": {
+  "fs": false,
+  "path": false,
+  "os": false
+}
 }

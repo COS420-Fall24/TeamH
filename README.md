@@ -8,6 +8,10 @@
 - Bryce D Roy, Developer
 
 ### Quick Start
+
+### Setup local LLM
+Step 1: Download and configure the [ollama desktop app](https://ollama.com/download)
+
 #### Install
 Step 1: Open Terminal \
 Step 2: Run `cd nocom` in terminal to position yourself in the FrontEnd folder \

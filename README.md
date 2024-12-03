@@ -9,7 +9,7 @@
 
 ### Quick Start
 
-### Setup local LLM
+#### Setup local LLM
 Step 1: Download and configure the [ollama desktop app](https://ollama.com/download)
 
 #### Install

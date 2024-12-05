@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import Modal from './components/Modal';
 import './Account.css';
 
 function Account() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const[showModal, setShowModal] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen); // Toggle the dropdown visibility
@@ -21,13 +24,15 @@ function Account() {
         <div className="account-dropdown">
           <ul>
             <li><a href="/profile">Profile</a></li>
+            <li><button onClick ={() => setShowModal(true)}>Settings</button></li>
             <li><a href="/settings">Settings</a></li>
             <li><a href="/logout">Logout</a></li>
           </ul>
+          {showModal && <Modal/>}
         </div>
       )}
     </div>
   );
 }
-
+/* */
 export default Account;

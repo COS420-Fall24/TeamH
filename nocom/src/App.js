@@ -11,11 +11,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Login screen route */}
-        <Route path="/" element={<LoginWidget />} />
         {/* Main app route */}
         <Route
-          path="/app"
+          path="/"
           element={
             <div>
               <Account />
@@ -23,7 +21,8 @@ const App = () => {
             </div>
           }
         />
-
+        {/* Login screen route */}
+        <Route path="/login" element={<LoginWidget />} />
         {/* Feedback/Explanations screen route */}
         <Route
           path="/feedback"

@@ -40,3 +40,20 @@
   padding: 10px; /* Padding inside the textarea */
   resize: none; /* Disable resizing */
 }
+
+.output-container {
+  margin-top: 20px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.output-container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.output-container p {
+  font-size: 16px;
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}

@@ -23,7 +23,7 @@ function Input() {
     // Call the Ollama API
     const res = await ollama.chat({
       model: 'llama3.2', // Ensure this model name is correct or update it
-      messages: [{ role: 'user', content: `You are an application designed for Helping beginner programmers learn to read code.:\n\nThe context provided by the user is: ${context}\n\The code is:\n${code}` }],
+      messages: [{ role: 'user', content: `You are an application designed for Helping beginner programmers learn to read code.:\n\nThe context provided by the user is: ${Context}\n\The code is:\n${Code}` }],
     });
     setResponse(res.message.content);
 

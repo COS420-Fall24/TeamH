@@ -7,20 +7,27 @@ import Account from "./components/Account";
 import Feedback from "./components/Feedback/Feedback";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+const AppLayout = ({ children }) => (
+  <div className="app-layout">
+    <Account />
+    <main>{children}</main>
+  </div>
+);
+
 const App = () => {
   return (
     <Router>
       <Routes>
         {/* Login screen route */}
         <Route path="/" element={<LoginWidget />} />
+
         {/* Main app route */}
         <Route
           path="/app"
           element={
-            <div>
-              <Account />
+            <AppLayout>
               <Input />
-            </div>
+            </AppLayout>
           }
         />
 
@@ -28,10 +35,9 @@ const App = () => {
         <Route
           path="/feedback"
           element={
-            <div>
-              <Account />
+            <AppLayout>
               <Feedback />
-            </div>
+            </AppLayout>
           }
         />
       </Routes>

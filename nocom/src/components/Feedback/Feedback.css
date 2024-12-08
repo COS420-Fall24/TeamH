@@ -3,40 +3,95 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
+  background-color: #f9f9f9; /* Light background */
 }
 
 .feedback h1 {
-  font-size: 24px;
+  font-size: 24px; /* Slightly larger for the header */
   margin-bottom: 20px;
+  color: #444;
 }
 
 .large-grey-container {
-  display: flex; /* Flexbox layout for side-by-side sections */
-  justify-content: space-between; /* Space between sections */
-  width: 90%; /* Large container width */
-  height: 80vh; /* Large container height */
-  margin: 20px auto; /* Center horizontally */
-  background-color: #e0e0e0; /* Light grey background */
-  border: 2px solid #e0e0e0; /* Border around the container */
+  display: flex; /* Flexbox layout for columns */
+  flex-direction: row; /* Arrange items side-by-side */
+  justify-content: space-between; /* Space between columns */
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #f9f9f9; /* Light background for container */
   border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Add padding inside the container */
-  gap: 20px; /* Add spacing between sections */
+  padding: 10px;
+  gap: 20px; /* Spacing between columns */
 }
 
-.feedback-section {
-  flex: 1; /* Each section takes equal space */
-  display: flex; /* Allow inner textarea to fill the section */
-  align-items: center; /* Center textarea vertically */
-  justify-content: center; /* Center textarea horizontally */
+.scrollable-box {
+  flex: 1; /* Each column takes equal width */
+  max-height: 80vh; /* Limit the height of the box */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #e6e6e6; /* Grey background for each box */
+  border: 1px solid #dcdcdc; /* Subtle border for boxes */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  font-size: 14px; /* Smaller font for content */
+  color: #333;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.big-text-box {
-  width: 90%; /* Make the textarea fill most of the section */
-  height: 90%; /* Make the textarea fill most of the section */
-  border: 1px solid #e0e0e0; /* Add border around text box */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #e0e0e0; /* Slightly lighter grey for textarea */
-  font-size: 16px; /* Font size for text */
-  padding: 10px; /* Padding inside the textarea */
-  resize: none; /* Disable resizing */
+.scrollable-box h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444; /* Darker headings */
 }
+
+.scrollable-box pre {
+  white-space: pre-wrap; /* Allow code wrapping */
+  font-family: monospace; /* Monospace font for code */
+}
+
+.links-box ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.links-box ul li {
+  margin: 10px 0;
+}
+
+.links-box ul li a {
+  color: #007bff; /* Blue links */
+  text-decoration: none;
+}
+
+.links-box ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+@media (max-width: 768px) {
+  .large-grey-container {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .scrollable-box {
+    max-height: 60vh; /* Adjust height for smaller screens */
+  }
+}
+.back-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #36c336;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 10%
+}
+
+.back-button:hover {
+  background-color: #36c336;
+}
+

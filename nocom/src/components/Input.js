@@ -33,7 +33,7 @@ function Input() {
       });
 
       const completion = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o",
         messages: [
           {
             role: "system",
@@ -93,10 +93,18 @@ Please format the response with clear headings, and place the links under a sepa
       <form method="post" onSubmit={handleSubmit}>
         <div>
           <label>
-            <InputBox name="Code" className="inp" placeholder="Enter your code here" />
+            <InputBox
+              name="Code"
+              className="inp"
+              placeholder="Enter your code here"
+            />
           </label>
           <label>
-            <InputBox name="Context" className="con" placeholder="Enter additional context here" />
+            <InputBox
+              name="Context"
+              className="con"
+              placeholder="Enter additional context here"
+            />
           </label>
         </div>
         <button type="submit" className="breakdown-button">

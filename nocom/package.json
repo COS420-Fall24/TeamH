@@ -16,12 +16,18 @@
     "@fortawesome/fontawesome-free": "^6.7.1",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
+<<<<<<< HEAD
     "dotenv": "^16.4.7",
     "history": "^5.3.0",
     "openai": "^4.76.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-markdown": "^9.0.1",
+=======
+    "history": "^5.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+>>>>>>> 0035beb419e070be2a5c9e4029e7733c2801d188
     "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1"
   },

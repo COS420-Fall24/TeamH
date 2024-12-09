@@ -3,6 +3,7 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
+<<<<<<< HEAD
   background-color: #f9f9f9; /* Light background */
 }
 
@@ -95,3 +96,42 @@
   background-color: #36c336;
 }
 
+=======
+}
+
+.feedback h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.large-grey-container {
+  display: flex; /* Flexbox layout for side-by-side sections */
+  justify-content: space-between; /* Space between sections */
+  width: 90%; /* Large container width */
+  height: 80vh; /* Large container height */
+  margin: 20px auto; /* Center horizontally */
+  background-color: #e0e0e0; /* Light grey background */
+  border: 2px solid #e0e0e0; /* Border around the container */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding inside the container */
+  gap: 20px; /* Add spacing between sections */
+}
+
+.feedback-section {
+  flex: 1; /* Each section takes equal space */
+  display: flex; /* Allow inner textarea to fill the section */
+  align-items: center; /* Center textarea vertically */
+  justify-content: center; /* Center textarea horizontally */
+}
+
+.big-text-box {
+  width: 90%; /* Make the textarea fill most of the section */
+  height: 90%; /* Make the textarea fill most of the section */
+  border: 1px solid #e0e0e0; /* Add border around text box */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #e0e0e0; /* Slightly lighter grey for textarea */
+  font-size: 16px; /* Font size for text */
+  padding: 10px; /* Padding inside the textarea */
+  resize: none; /* Disable resizing */
+}
+>>>>>>> 0035beb419e070be2a5c9e4029e7733c2801d188

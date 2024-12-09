@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Feedback.css";
 
@@ -74,6 +75,20 @@ function Feedback() {
       <button onClick={() => navigate(-1)} className="back-button">
         Go Back
       </button>
+=======
+import "./Feedback.css";
+import InputBox from "../InputBox";
+
+function Feedback() {
+  return (
+    <div className="feedback">
+      {/* Larger Grey Container with Side-by-Side Text Areas */}
+      <div className="large-grey-container">
+        <InputBox className="big-text-box" placeholder="Code" />
+        <InputBox className="big-text-box" placeholder="Explanation" />
+        <InputBox className="big-text-box" placeholder="Screen" />
+      </div>
+>>>>>>> 0035beb419e070be2a5c9e4029e7733c2801d188
     </div>
   );
 }

@@ -4,6 +4,7 @@ body {
     background-color: #f4f4f4; /* Light background */
   }
   
+<<<<<<< HEAD
   .app-layout {
     display: flex;
     flex-direction: column;
@@ -15,3 +16,5 @@ body {
     padding: 20px;
   }
   
+=======
+>>>>>>> 0035beb419e070be2a5c9e4029e7733c2801d188

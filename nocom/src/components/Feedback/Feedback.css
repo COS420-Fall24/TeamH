@@ -31,8 +31,8 @@
 }
 
 .big-text-box {
-  width: 90%; /* Make the textarea fill most of the section */
-  height: 90%; /* Make the textarea fill most of the section */
+  width: 100%; /* Make the textarea fill most of the section */
+  height: 100%; /* Make the textarea fill most of the section */
   border: 1px solid #e0e0e0; /* Add border around text box */
   border-radius: 5px; /* Rounded corners */
   background-color: #e0e0e0; /* Slightly lighter grey for textarea */

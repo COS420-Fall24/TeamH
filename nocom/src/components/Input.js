@@ -75,6 +75,7 @@ Please format the response with clear headings, and place the links under a sepa
         state: {
           code: Code,
           context: Context,
+          chat: 'Chat:\n',
           explanation: explanation || "No explanation provided",
           links: links || "No links provided",
         },

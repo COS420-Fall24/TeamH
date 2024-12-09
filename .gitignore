@@ -1,2 +1,6 @@
-node_modules/
 coverage/
+node_modules/
+# Add this to .gitignore
+.env
+../-files
+../bfg-1.14.0.jar

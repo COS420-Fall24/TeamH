@@ -1,72 +1,66 @@
 /* Container */
 .account-container {
-    position: absolute; /* Position relative to the page */
-    top: 10px; /* Distance from the top */
-    /* right: 100px; */
-    right: calc(1%); /* Distance from the left */
-  }
-  
-  /* Account Button */
-  .Account {
-    position: relative; /* Keeps the dropdown aligned relative to this button */
-    width: 120px;
-    height: 40px;
-    background-color: #41e241;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  }
-  
-  /* Hover Effects */
-  .Account:hover {
-    background-color: #41e241;
-    transform: scale(1.05);
-  }
-  
-  /* Dropdown Menu */
-  .account-dropdown {
-    position: absolute; /* Positioned relative to the .account-container */
-    top: 50px; /* Align below the button */
-    right: 0; /* Align with the button's left edge */
-    width: 200px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-    z-index: 1000; /* Ensure it stays on top of other content */
-    text-align: left; /* Align text inside the dropdown */
-  }
-  
-  /* Dropdown Items */
-  .account-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .account-dropdown li {
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .account-dropdown li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .account-dropdown li:hover {
-    background-color: #f4f4f4;
-  }
-  
-  .fas{
-    margin-right: 8px
-  }
+  position: absolute; /* Position relative to the page */
+  top: 10px; /* Distance from the top */
+  /* right: 100px; */
+  right: calc(1%); /* Distance from the left */
+}
+.Account {
+  width: 120px;
+  height: 40px;
+  background-color: #41e241;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.Account:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu */
+.account-dropdown {
+  position: absolute; /* Positioned relative to the .account-container */
+  top: 50px; /* Align below the button */
+  right: 0; /* Align with the button's left edge */
+  width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  text-align: left; /* Align text inside the dropdown */
+}
+
+/* Dropdown Items */
+.account-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.account-dropdown li {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.account-dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.account-dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+.fas {
+  margin-right: 8px;
+}

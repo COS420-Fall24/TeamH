@@ -22,13 +22,10 @@ function Input() {
 
     try {
       setError(null);
-
-      if (!process.env.REACT_APP_OPENAI_API_KEY) {
-        throw new Error("OpenAI API key is not configured");
-      }
+      let apikey = prompt("Enter OpenAI API key:");
 
       const openai = new OpenAI({
-        apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+        apiKey: apikey,
         dangerouslyAllowBrowser: true,
       });
 

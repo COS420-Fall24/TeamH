@@ -91,7 +91,7 @@ function Feedback() {
         ? linksMatch[0].replace("### Suggested Links:", "").trim()
         : "No links provided";
 
-      const newchat = chat + "\n"+ Chat + "\n" + aiResponse.replace(linksRegex, "").trim();
+      const newchat = chat + "\n\n"+ Chat + "\n\n" + aiResponse.replace(linksRegex, "").trim();
 
       navigate("/feedback", {
         state: {

@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Feedback.css";
+import InputBox from "../InputBox";
 
 function Feedback() {
   const location = useLocation();
@@ -36,40 +37,12 @@ function Feedback() {
 
   return (
     <div className="feedback">
-      <h1>Feedback</h1>
+      {/* Larger Grey Container with Side-by-Side Text Areas */}
       <div className="large-grey-container">
-        {/* Code Section */}
-        <div className="scrollable-box">
-          <h2>Code</h2>
-          <pre>{code || "No code provided"}</pre>
-        </div>
-
-        {/* Explanation Section */}
-        <div className="scrollable-box">
-          <h2>Explanation</h2>
-          <pre>{explanation || "No explanation provided"}</pre>
-        </div>
-
-        {/* Links Section */}
-        <div className="scrollable-box links-box">
-          <h2>Links</h2>
-          {parsedLinks.length > 0 ? (
-            <ul>
-              {parsedLinks.map((link, index) => (
-                <li key={index}>
-                  {link.text}:{" "}
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    {link.url}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No links provided</p>
-          )}
-        </div>
+          <InputBox className="big-text-box" value={code}/>
+          <InputBox className="big-text-box" value={explanation} />
+          <InputBox className="big-text-box" placeholder="Screen" />
       </div>
-
       {/* Back Button */}
       <button onClick={() => navigate(-1)} className="back-button">
         Go Back

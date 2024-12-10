@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import './Account.css';
 
-function Account() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Account() {
 
-  const[showModal, setShowModal] = useState(false);
+  const[modal, setModal] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen); // Toggle the dropdown visibility
+  const toggleModal = () => {
+    setModal(!modal)
   };
 
+
   return (
-    <div className="account-container">
-      {/* Account Button */}
-      <button className="Account" onClick={toggleDropdown}>
-        <i className="fas fa-user-circle"></i>
-        Account
-      </button>
+    <div>
+    
+    <button
+    onClick={toggleModal}
+    className="btn-modal">
+      Open
+    </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
@@ -34,5 +35,3 @@ function Account() {
     </div>
   );
 }
-/* */
-export default Account;

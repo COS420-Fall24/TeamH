@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from './components/Modal';
+import Modal from './Modal';
 import './Account.css';
 
 function Account() {
@@ -28,9 +28,9 @@ function Account() {
             <li><a href="/settings">Settings</a></li>
             <li><a href="/logout">Logout</a></li>
           </ul>
-          {showModal && <Modal/>}
         </div>
       )}
+    {showModal && <Modal/>}
     </div>
   );
 }

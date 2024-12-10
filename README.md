@@ -5,7 +5,7 @@
 - Obed Appiah, Designer
 - Anthony M Weaver, Developer
 - Benjamin Paul Caras, Developer
-- Bryce D Roy, Developer
+- Bryce David Roy, Developer
 
 ### Quick Start
 #### Install

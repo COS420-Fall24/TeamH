@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Input.css";
 import { useNavigate } from "react-router-dom";
 import InputBox from "./InputBox";
-import OpenAI from "openai";
+import { OpenAI } from "openai";
 
 function Input() {
   const navigate = useNavigate();
@@ -88,7 +88,7 @@ Please format the response with clear headings, and place the links under a sepa
 
   return (
     <div className="inputbox">
-      <form method="post" onSubmit={handleSubmit}>
+      <form method="post" onSubmit={handleSubmit} aria-label="code-input-form">
         <div>
           <label>
             <InputBox
@@ -109,7 +109,7 @@ Please format the response with clear headings, and place the links under a sepa
           BreakDown
         </button>
       </form>
-      {error && <div className="error">{error}</div>}
+      {error && <div className="error" role="alert">{error}</div>}
     </div>
   );
 }

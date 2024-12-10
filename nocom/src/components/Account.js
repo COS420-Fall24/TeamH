@@ -1,38 +1,31 @@
 import React, { useState } from 'react';
-import Modal from './components/Modal';
 import './Account.css';
 
-function Account() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Account() {
 
-  const[showModal, setShowModal] = useState(false);
+  const[modal, setModal] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen); // Toggle the dropdown visibility
+  const toggleModal = () => {
+    setModal(!modal)
   };
 
-  return (
-    <div className="account-container">
-      {/* Account Button */}
-      <button className="Account" onClick={toggleDropdown}>
-        <i className="fas fa-user-circle"></i>
-        Account
-      </button>
 
-      {/* Dropdown Menu */}
-      {isOpen && (
-        <div className="account-dropdown">
-          <ul>
-            <li><a href="/profile">Profile</a></li>
-            <li><button onClick ={() => setShowModal(true)}>Settings</button></li>
-            <li><a href="/settings">Settings</a></li>
-            <li><a href="/logout">Logout</a></li>
-          </ul>
-          {showModal && <Modal/>}
-        </div>
-      )}
+  return (
+    <>
+    
+    <button
+    onClick={toggleModal}
+    className="btn-modal">
+      Open
+    </button>
+
+    <div className="modal">
+      <div className="overlay"></div>
+      <div className="modal-content">
+        <h2>Account Settings</h2>
+        <p>Hello World</p>
+      </div>
     </div>
+    </>
   );
 }
-/* */
-export default Account;

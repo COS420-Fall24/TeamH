@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Feedback.css";
 import InputBox from "../InputBox";
-import OpenAI from "openai";
+import { OpenAI } from "openai";
 
 function Feedback() {
   const location = useLocation();
@@ -101,16 +101,15 @@ function Feedback() {
           links: links || "No links provided",
         },
       });
-      window.location.reload();
     } catch (error) {
       console.error("OpenAI API Error:", error);
-      setError("Error: " + error.message);
+      setError(`Error: ${error.message}`);
     }
   };
 
   return (
     <div className="feedback">
-      <form method="post" onSubmit={handleSubmit}>
+      <form method="post" onSubmit={handleSubmit} aria-label="feedback form">
       <div className="large-grey-container">
         <label className="big-text-box" >
           <InputBox name="Code" className="big-text-box" value={code}/>
@@ -126,11 +125,13 @@ function Feedback() {
           Re-Explain
         </button>
       </form>
-      {/* Larger Grey Container with Side-by-Side Text Areas */}
-      {/* Back Button */}
+      {error && <div className="error" data-testid="error-message">{error}</div>}
       <button onClick={() => navigate(-1)} className="back-button">
         Go Back
       </button>
+      {parsedLinks.map((link, index) => (
+        <a key={index} href={link.url}>{link.text}</a>
+      ))}
     </div>
   );
 }

@@ -1,53 +1,171 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import { MemoryRouter, Routes, Route } from "react-router-dom";
+import { render, screen, fireEvent, waitFor, act } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import Input from "./Input";
-import InputBox from "./InputBox";
 
-// Mock InputBox component to test its integration
-jest.mock("./InputBox", () => ({ name, className }) => (
-  <input data-testid={name} className={className} />
-));
+const mockNavigate = jest.fn();
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockNavigate,
+}));
 
-const setup = () => {
-  const utils = render(
-    <MemoryRouter initialEntries={["/"]}>
-      <Routes>
-        <Route path="/" element={<Input />} />
-        <Route path="/feedback" element={<div>Feedback Screen</div>} />
-      </Routes>
-    </MemoryRouter>
-  );
-  const codeInput = screen.getByTestId("Code");
-  const contextInput = screen.getByTestId("Context");
-  const submitButton = screen.getByRole("button", { name: /BreakDown/i });
-  return {
-    codeInput,
-    contextInput,
-    submitButton,
-    ...utils,
-  };
-};
+const mockCreate = jest.fn();
+jest.mock("openai", () => ({
+  OpenAI: function () {
+    return {
+      chat: {
+        completions: {
+          create: mockCreate,
+        },
+      },
+    };
+  },
+}));
+
+const mockPrompt = jest.spyOn(window, "prompt").mockImplementation(() => "mock-api-key");
+
+beforeEach(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+  mockNavigate.mockClear();
+  mockCreate.mockClear();
+  mockPrompt.mockClear();
+  mockCreate.mockResolvedValue({
+    choices: [{ 
+      message: { 
+        content: "### Explanation:\nMocked AI Response\n### Suggested Links:\n[Example Link](http://example.com)" 
+      } 
+    }],
+  });
+});
+
+afterEach(() => {
+  console.error.mockRestore();
+});
 
 test("renders Input component with fields and button", () => {
-  const { codeInput, contextInput, submitButton } = setup();
-  expect(codeInput).toBeInTheDocument();
-  expect(contextInput).toBeInTheDocument();
-  expect(submitButton).toBeInTheDocument();
+  render(
+    <MemoryRouter>
+      <Input />
+    </MemoryRouter>
+  );
+
+  expect(screen.getByPlaceholderText(/Enter your code here/i)).toBeInTheDocument();
+  expect(screen.getByPlaceholderText(/Enter additional context here/i)).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /BreakDown/i })).toBeInTheDocument();
 });
 
-test("allows input into the Code and Context fields", () => {
-  const { codeInput, contextInput } = setup();
-  fireEvent.change(codeInput, { target: { value: "Sample Code" } });
-  fireEvent.change(contextInput, { target: { value: "Sample Context" } });
-  expect(codeInput.value).toBe("Sample Code");
-  expect(contextInput.value).toBe("Sample Context");
+test("shows error when Code input is empty", async () => {
+  render(
+    <MemoryRouter>
+      <Input />
+    </MemoryRouter>
+  );
+
+  await act(async () => {
+    fireEvent.click(screen.getByRole("button", { name: /BreakDown/i }));
+  });
+
+  expect(screen.getByText(/Code input cannot be empty/i)).toBeInTheDocument();
 });
 
-test("navigates to the Feedback screen on form submission", () => {
-  const { codeInput, contextInput, submitButton } = setup();
-  fireEvent.change(codeInput, { target: { value: "Sample Code" } });
-  fireEvent.change(contextInput, { target: { value: "Sample Context" } });
-  fireEvent.click(submitButton);
-  expect(screen.getByText(/Feedback Screen/i)).toBeInTheDocument();
+test("navigates to feedback page with valid response", async () => {
+  render(
+    <MemoryRouter>
+      <Input />
+    </MemoryRouter>
+  );
+
+  fireEvent.change(screen.getByPlaceholderText(/Enter your code here/i), {
+    target: { value: "Sample Code" },
+  });
+
+  await act(async () => {
+    fireEvent.submit(screen.getByRole("form"));
+  });
+
+  await waitFor(() => {
+    expect(mockNavigate).toHaveBeenCalledWith("/feedback", {
+      state: {
+        code: "Sample Code",
+        context: "",
+        chat: "Chat:",
+        explanation: "### Explanation:\nMocked AI Response",
+        links: "[Example Link](http://example.com)"
+      }
+    });
+  });
+});
+
+test("handles response with sections", async () => {
+  render(
+    <MemoryRouter>
+      <Input />
+    </MemoryRouter>
+  );
+
+  fireEvent.change(screen.getByPlaceholderText(/Enter your code here/i), {
+    target: { value: "Sample Code" },
+  });
+
+  // Mock response with sections
+  mockCreate.mockResolvedValueOnce({
+    choices: [{ 
+      message: { 
+        content: "### Explanation:\nTest explanation\n### Suggested Links:\n[Link](http://test.com)" 
+      } 
+    }]
+  });
+
+  await act(async () => {
+    fireEvent.submit(screen.getByRole("form"));
+  });
+
+  await waitFor(() => {
+    expect(mockNavigate).toHaveBeenCalledWith("/feedback", {
+      state: {
+        code: "Sample Code",
+        context: "",
+        chat: "Chat:",
+        explanation: "### Explanation:\nTest explanation",
+        links: "[Link](http://test.com)"
+      }
+    });
+  });
+});
+
+test("handles response without sections", async () => {
+  render(
+    <MemoryRouter>
+      <Input />
+    </MemoryRouter>
+  );
+
+  fireEvent.change(screen.getByPlaceholderText(/Enter your code here/i), {
+    target: { value: "Sample Code" },
+  });
+
+  // Mock response without sections
+  mockCreate.mockResolvedValueOnce({
+    choices: [{ 
+      message: { 
+        content: "Plain response without sections" 
+      } 
+    }]
+  });
+
+  await act(async () => {
+    fireEvent.submit(screen.getByRole("form"));
+  });
+
+  await waitFor(() => {
+    expect(mockNavigate).toHaveBeenCalledWith("/feedback", {
+      state: {
+        code: "Sample Code",
+        context: "",
+        chat: "Chat:",
+        explanation: "Plain response without sections",
+        links: "No links provided"
+      }
+    });
+  });
 });

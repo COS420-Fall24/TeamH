@@ -37,7 +37,7 @@ test("renders login form with title, email, password inputs, and submit button",
   expect(screen.getByRole("button", { name: /submit/i })).toBeInTheDocument();
 });
 
-test('This should check Input into fields', () => {
+test('Inputs text into email and password input', () => {
   const {emailInput,passwordInput} = setup()
   fireEvent.change(emailInput, {target: {value: '23'}})
   fireEvent.change(passwordInput, {target: {value: '23'}})
@@ -45,7 +45,7 @@ test('This should check Input into fields', () => {
   expect(passwordInput.value).toBe('23')
 })
 
-test('This should check Input into fields', () => {
+test('attempts to login with valid credentials', () => {
   const {emailInput,passwordInput,submit} = setup()
   fireEvent.change(emailInput, {target: {value: 'admin@example.com'}})
   fireEvent.change(passwordInput, {target: {value: 'password'}})
@@ -53,7 +53,7 @@ test('This should check Input into fields', () => {
   expect(document.body.textContent).toBe('BreakDown')
 })
 
-test('This should check Input into fields', () => {
+test('Tattempts to login with valid incredential', () => {
   const {emailInput,passwordInput,submit} = setup()
   fireEvent.change(emailInput, {target: {value: 'admin@example.com'}})
   fireEvent.change(passwordInput, {target: {value: 'wrongpassword'}})

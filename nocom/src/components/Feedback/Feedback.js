@@ -99,8 +99,9 @@ function Feedback() {
           explanation: Explination || "No explanation provided",
           chat: newchat,
           links: links || "No links provided",
-        },
+        },  
       });
+      window.location.reload();
     } catch (error) {
       console.error("OpenAI API Error:", error);
       setError(`Error: ${error.message}`);
